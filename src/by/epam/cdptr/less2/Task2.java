@@ -5,11 +5,11 @@ public class Task2 {
         double a, b, c;
         double result, temp1, temp2;
 
-        ScanDouble sc = new ScanDouble();
+        ReadInput read = new ReadInput();
 
-        a = sc.getInput("a");
-        b = sc.getInput("b");
-        c = sc.getInput("c");
+        a = read.getDouble("a");
+        b = read.getDouble("b");
+        c = read.getDouble("c");
 
         temp1 = 2 * a;
         temp2 = Math.pow(b,2) + 4 * a * c;

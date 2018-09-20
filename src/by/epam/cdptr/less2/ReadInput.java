@@ -2,10 +2,10 @@ package by.epam.cdptr.less2;
 
 import java.util.*;
 
-public class ScanDouble {
+public class ReadInput {
 
 
-    public Double getInput(String argument) {
+    Double getDouble(String argument) {
         Scanner sc = new Scanner(System.in);
         double value = Double.MAX_VALUE;
 
@@ -15,6 +15,7 @@ public class ScanDouble {
 
             try {
                 value = sc.nextDouble();
+
             } catch (InputMismatchException e) {
                 System.out.println("Incorrect input. Try again.");
                 sc.next();
@@ -23,5 +24,4 @@ public class ScanDouble {
 
         return value;
     }
-
 }

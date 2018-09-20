@@ -4,13 +4,13 @@ package by.epam.cdptr.less2;
 public class Formula {
     public static void main(String[] args){
 
-        double x = 180, y = 2;
+        double x, y;
         double c, temp;
 
-        ScanDouble sc = new ScanDouble();
+        ReadInput read = new ReadInput();
 
-        x = sc.getInput("x");
-        y = sc.getInput("y");
+        x = read.getDouble("x");
+        y = read.getDouble("y");
 
         temp = Math.cos(x) - (x/3);
 
