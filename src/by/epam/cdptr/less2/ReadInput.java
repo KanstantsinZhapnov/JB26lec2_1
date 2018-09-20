@@ -2,25 +2,38 @@ package by.epam.cdptr.less2;
 
 import java.util.*;
 
-public class ReadInput {
+class ReadInput {
 
 
     Double getDouble(String argument) {
         Scanner sc = new Scanner(System.in);
-        double value = Double.MAX_VALUE;
+        double value;
 
         System.out.print("Введите " + argument + ": ");
 
-        while (value == Double.MAX_VALUE) {
+        while (!sc.hasNextDouble()) {
 
-            try {
-                value = sc.nextDouble();
-
-            } catch (InputMismatchException e) {
-                System.out.println("Incorrect input. Try again.");
-                sc.next();
-            }
+            System.out.print("Incorrect input. Введите " + argument + ": ");
+            sc.nextLine();
         }
+
+        value = sc.nextDouble();
+        return value;
+    }
+
+
+    Integer getInteger(String argument) {
+        Scanner sc = new Scanner(System.in);
+        Integer value;
+
+        System.out.print("Введите " + argument + ": ");
+
+        while (!sc.hasNextInt()) {
+            System.out.print("Incorrect input. Введите " + argument + ": ");
+            sc.nextLine();
+        }
+
+        value = sc.nextInt();
 
         return value;
     }
